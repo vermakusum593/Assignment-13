@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Side Navigation Bar</title>
+    <link rel="stylesheet" href="../style/sidenav.css"> 
+    <link rel="stylesheet" href="/style/reset.css">
+</head>
+<body>
+    <button id="toggle-button" class="toggle-btn">☰</button>
+    <div class="sidenav" id="sidenav">
+        <h2 class="logo">My Website</h2>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Testimonials</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content" id="main-content">
+        <h1>Welcome to Our Website</h1>
+        <p>Your one-stop solution for all web services.</p>
+    </div>
+
+    <script>
+        
+        document.getElementById("toggle-button").addEventListener("click", function() {
+            var sidenav = document.getElementById("sidenav");
+            var mainContent = document.getElementById("main-content");
+            if (sidenav.style.width === "250px") {
+                sidenav.style.width = "0"; 
+                mainContent.style.marginLeft = "0"; 
+            } else {
+                sidenav.style.width = "250px"; 
+                mainContent.style.marginLeft = "250px"; 
+            }
+        });
+    </script>
+</body>
+</html>
